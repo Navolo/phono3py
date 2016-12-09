@@ -48,6 +48,7 @@ def create_phono3py_supercells(unitcell,
                                symprec,
                                interface_mode='vasp',
                                output_filename=None,
+                               use_alm=False,
                                log_level=1):
     if displacement_distance is None:
         if interface_mode == 'pwscf':
@@ -66,7 +67,8 @@ def create_phono3py_supercells(unitcell,
         distance=distance,
         cutoff_pair_distance=cutoff_pair_distance,
         is_plusminus=is_plusminus,
-        is_diagonal=is_diagonal)
+        is_diagonal=is_diagonal,
+        use_alm=use_alm)
     dds = phono3py.get_displacement_dataset()
     
     if log_level:

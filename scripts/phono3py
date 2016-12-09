@@ -323,8 +323,9 @@ if settings.get_create_displacements():
         write_supercells_with_displacements,
         optional_structure_file_information,
         symprec,
-        output_filename=output_filename,
         interface_mode=interface_mode,
+        output_filename=output_filename,
+        use_alm=settings.get_use_alm(),
         log_level=log_level)
     
     finalize_phono3py(log_level,

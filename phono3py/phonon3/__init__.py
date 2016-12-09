@@ -181,7 +181,8 @@ class Phono3py(object):
                                distance=0.03,
                                cutoff_pair_distance=None,
                                is_plusminus='auto',
-                               is_diagonal=True):
+                               is_diagonal=True,
+                               use_alm=False):
         direction_dataset = get_third_order_displacements(
             self._supercell,
             self._symmetry,
